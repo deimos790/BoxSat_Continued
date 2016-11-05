@@ -1,0 +1,297 @@
+=============================================================================================
+v0.2
+=============================================================================================
+- Added Credits file
+- Added "Side_Nodes.cfg" community patch; original by LeLeon and tweaked by Deimos Rast
+- Added "WorkLight.cfg" community patch;  original by DigitalProeliator and tweaked by Deimos Rast
+- Removed folder "Delete"
+- Transitioned to GitHub
+
+=============================================================================================
+v0.1
+=============================================================================================
+//-------------------------Command------------------------------------//
+Probe Core Module
+- Mass increased from 0.01 to 0.025
+- Added drag
+- Increased crashTolerance from 3 to 12
+- Added vesselType = Probe
+- Added CrewCapacity = 0
+- Added explosionPotential = 0
+- Added tags
+- Added Hibernation
+- Reduced ElectricCharge resource from 50 to 10
+- Increased ReactionWheel torque evenly from 0.01 to 0.1
+- Increased ReactionWheel ElectricCharge rate from 0.0005 to 0.001
+- Added Kerbnet (OKTO1 level)
+- Added Data Transmitter
+
+Advanced Probe Core Module
+- Reenabled part
+- entryCost decreased from 28274 to 5000
+- cost increased from 900 to 1800
+- Updated description
+- Mass increased from 0.01 to 0.025
+- Added drag
+- Increased crashTolerance from 3 to 12
+- Added vesselType = Probe
+- Added CrewCapacity = 0
+- Added explosionPotential = 0
+- Added tags
+- Reduced ModuleCommand ElectricCharge rate from 0.0166666667 to 0.01
+- Added improved Hibernation
+- Reduced ElectricCharge resource from 50 to 25
+- Increased ReactionWheel torque evenly from 0.01 to 0.1
+- Added Kerbnet (OKTO2 level)
+- Added Data Transmitter
+
+//-------------------------Control------------------------------------//
+Reaction Wheel Module
+- Reduced entryCost from 1645 to 800
+- Reduced cost from 750 to 325
+- Increased mass from 0.005 to 0.008 (thanks LeLeon)
+- Added/adjusted drag
+- Increased crashTolerance from 3 to 9
+- Increased maxTemp from 1200 to 2000
+- Added tags
+
+RCS Module
+- Increased maxTemp from 1200 to 1500
+- Added PhysicsSignificance = 1
+- Added tags
+- Converted ModuleRCS to new ModuleRCSFX
+- Added RCS soundFX (very quiet, same as stock)
+- Added resourceFlowMode = STAGE_PRIORITY_FLOW
+
+//-------------------------Communications------------------------------------//
+Hinged Dish
+- Adjusted attachRules (no real effect)
+- Reduced entryCost from 13091 to 3850
+- Changed Category to Communication
+- Increased maxTemp from 1200 to 2000
+- Added tags
+- Attempted to convert ModuleAnimateGeneric to ModuleDeployableAntenna, but failed miserably. Should help with RemoteTech though.
+- Added allowAnimationWhileShielded = False to ModuleAnimateGeneric
+- Upgraded ModuleDataTransmitter with new fields (DIRECT antennaType)
+- packetResourceCost reduced slightly (same as stock now)
+- AntennaPower = 1500000000; DTS-M1 is 2000000000
+- Removed ProgressFxModules as it didn't do anything
+
+Dipole Antenna
+- Adjusted attachRules (no real effect)
+- Reduced entryCost from 4440 to 1250
+- Changed Category to Communication
+- Increased maxTemp from 1200 to 2000
+- Added tags
+- Attempted to convert ModuleAnimateGeneric to ModuleDeployableAntenna, but failed miserably. Should help with RemoteTech though.
+- Added allowAnimationWhileShielded = False to ModuleAnimateGeneric
+- Upgraded ModuleDataTransmitter with new fields (DIRECT antennaType)
+- packetResourceCost reduced slightly (same as stock now)
+- AntennaPower = 800000; C16 is 500000
+- Removed ProgressFxModules as it didn't do anything
+- Added PhysicsSignificance = 1
+
+Monopole Antenna
+- Adjusted attachRules (no real effect)
+- Reduced entryCost from 4440 to 650
+- Changed Category to Communication
+- Increased maxTemp from 1200 to 2000
+- Added tags
+- Attempted to convert ModuleAnimateGeneric to ModuleDeployableAntenna, but failed miserably. Should help with RemoteTech though.
+- Added allowAnimationWhileShielded = False to ModuleAnimateGeneric
+- Upgraded ModuleDataTransmitter with new fields (DIRECT antennaType)
+- packetResourceCost reduced slightly (same as stock now)
+- AntennaPower = 350000; C16 is 500000
+- Removed ProgressFxModules as it didn't do anything
+- Added PhysicsSignificance = 1
+
+//-------------------------Electrical------------------------------------//
+Fixed Solar Panel
+- Changed Category to Electrical
+- Added PhysicsSignificance = 1
+- Added tags
+- Updated ModuleDeployableSolarPanel fields
+
+Folding Solar Panel
+- Changed Category to Electrical
+- Reduced mass from 0.025 to 0.0175 (same as stock shroudless panels)
+- Added thermalMassModifier = 2.0 (same as stock shroudless panels)
+- Added emissiveConstant = 0.95 (same as stock shroudless panels)
+- Added heatConductivity = 0.04 (same as stock shroudless panels)
+- Added tags
+- Updated ModuleDeployableSolarPanel fields
+
+Battery Module
+- Reduced entryCost from 3669 to 2000
+- Reduced cost from 300 to 200
+- Changed Category to Electrical
+- Added/adjusted drag
+- Increased crashTolerance from 3 to 8
+- Added tags
+
+//-------------------------Fuel------------------------------------//
+LFO Tank Module
+- Reduced entryCost from 11322 to 2100
+- Reduced cost from 600 to 35
+- Added/adjusted drag
+- Increased crashTolerance from 3 to 6
+- Added breakingForce/Torque of 50
+- Increased maxTemp from 1200 to 2000
+- Added tags
+- Extended Oxidizer resource quantity out two more decimal places, to be consistent with LiquidFuel. Yup.
+
+MONO Tank Module
+- Reduced entryCost from 11406 to 900
+- Reduced cost from 600 to 33
+- Added/adjusted drag
+- Increased crashTolerance from 3 to 6
+- Added breakingForce/Torque of 50
+- Increased maxTemp from 1200 to 2000
+- Added tags
+
+XENON Tank Module
+- Changed TechRequired from precisionEngineering to ionPropulsion
+- Reduced entryCost from 11406 to 6285
+- Increased cost from 600 to 2600 (thanks LeLeon)
+- Updated decription: this part is no longer a prototype!
+- Added/adjusted drag
+- Increased crashTolerance from 3 to 6
+- Added breakingForce/Torque of 50
+- Increased maxTemp from 1200 to 2000
+- Added tags
+
+//-------------------------Science------------------------------------//
+Accelerometer Module
+- Reduced entryCost from 20410 to 8500 (stock is 8200)
+- Added drag
+- Increased crashTolerance from 3 to 8
+- Added tags
+- Increased experiment interactionRange from 1.2 to 1.5
+- Added usageReqMask's
+
+Barometer Module
+- Reduced entryCost from 11932 to 2500 (stock is 2200)
+- Reduced cost from 3800 to 1000 (stock is 880)
+- Added drag
+- Increased crashTolerance from 3 to 8
+- Added tags
+- Increased experiment interactionRange from 1.2 to 1.5
+- Added usageReqMask's
+
+Gravimeter Module
+- Reduced entryCost from 29202 to 15000 (stock is 12200)
+- Added drag
+- Increased crashTolerance from 3 to 8
+- Added tags
+- Increased experiment interactionRange from 1.2 to 1.5
+- Added usageReqMask's
+
+Thermometer Module
+- Fixed typo in "Thermomometer"
+- Added drag
+- Increased crashTolerance from 3 to 8
+- Added tags
+- Increased experiment interactionRange from 1.2 to 1.5
+- Added usageReqMask's
+
+//-------------------------Structural------------------------------------//
+Empty Module
+- Reduced entryCost from 350 to 250
+- Increased cost from 10 to 50
+- Changed category to Payload
+- Added drag
+- Increased crashTolerance from 3 to 8
+- Increased maxTemp from 1200 to 2000
+- Added tags
+
+Frame
+- Changed category to Payload
+- Added drag
+- Increased crashTolerance from 8 to 12
+- Added breakingForce/Torque of 50
+- Increased maxTemp from 1600 to 2500 (cargo bay levels)
+- Added emissiveConstant = 0.8
+- Added heatConductivity = 0.04
+- Added fuelCrossFeed
+- Added tags
+
+Payload Frame
+- Increased entryCost from 0 to 4492 (same as other frame; could be further adjusted)
+- Changed category to Payload
+- Updated description
+- Added drag
+- Increased crashTolerance from 8 to 12
+- Added breakingForce/Torque of 50
+- Increased maxTemp from 1600 to 2500 (cargo bay levels)
+- Added emissiveConstant = 0.8
+- Added heatConductivity = 0.04
+- Added fuelCrossFeed
+- Added tags
+
+Hatch
+- Reduced entryCost from 941 to 500
+- Added drag
+- Increased crashTolerance from 3 to 12
+- Added breakingForce/Torque of 50
+- Increased maxTemp from 1600 to 2500 (cargo bay levels)
+- Added emissiveConstant = 0.8
+- Added heatConductivity = 0.04
+- Added fuelCrossFeed
+- Added tags
+
+Blowoff Hatch
+- Reduced entryCost from 941 to 500
+- Updated description
+- Added drag
+- Increased crashTolerance from 3 to 12
+- Added breakingForce/Torque of 50
+- Increased maxTemp from 1600 to 2500 (cargo bay levels)
+- Added emissiveConstant = 0.8
+- Added heatConductivity = 0.04
+- Added fuelCrossFeed
+- Added tags
+
+//-------------------------Engines------------------------------------//
+LFO Engine
+- Increased entryCost from 0 to 2500
+- Reduced cost from 400 to 350
+- Updated description: this engine is no longer a prototype!
+- Added drag
+- Increased crashTolerance from 3 to 7
+- Added breakingForce/Torque of 50
+- Increased maxTemp from 1200 to 2000
+- Added emissiveConstant = 0.8
+- Added heatConductivity = 0.06
+- Added skinInternalConductionMult = 4.0
+- Added tags
+- Converted ModuleEngines to ModuleEnginesFX
+- Added new engine FX from RAPIER engine
+- Removed old engine FX
+- Added EngineType = LiquidFuel
+- Added DrawGauge = True
+
+MONO Engine
+- Increased entryCost from 0 to 2250
+- Reduced cost from 400 to 300
+- Updated description: this engine is no longer a prototype!
+- Added drag
+- Increased crashTolerance from 3 to 7
+- Added breakingForce/Torque of 50
+- Increased maxTemp from 1200 to 2000
+- Added emissiveConstant = 0.8
+- Added heatConductivity = 0.06
+- Added skinInternalConductionMult = 4.0
+- Added tags
+- Converted ModuleEngines to ModuleEnginesFX
+- Added new engine FX from Puff engine
+- Removed old engine FX
+- Reduced heatProduction from 30 to 10
+- Added EngineType = LiquidFuel
+- Added DrawGauge = True
+- Reduced MonoPropellant propellant ratio from 1.0 to 0.9 (same as stock)
+
+//-------------------------Patches------------------------------------//
+Patches
+- Cleaned up the mod related patches
+- Rewrote them so they can be run alongside the ones contained within the BoxSat folders without causing conflicts
+- Added RCS nodes to Payload Frame
