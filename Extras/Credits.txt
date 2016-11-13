@@ -1,3 +1,0 @@
-These patches were compiled by Deimos Rast, but represent a community effort.
-Special thanks goes out to LeLeon, for offering numerous suggestions and providing additional patches.
-Likewise, thank you to DigitalProeliator for his patch.
